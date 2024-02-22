@@ -1,0 +1,676 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="description" content="Seiha Global Academy">
+    <meta name="author" content="Hermogenes Alcover III, Mumar Adam Villariasa">
+    <meta name="keyword" content="esl school in cebu,esl,learn english, travel and learn, Philippine language study training">
+    <meta name="keywords" content="Philippines, Cebu, SEIHA GLOBAL ACADEMY, English, study, English study, School, Academy, English academy, training, English training, language training, family training, camp, English camp, family camp, junior camp, ESL, TOEIC, TOEFL, IELTS, Cambridge">
+	<meta name="keywords" content="필리핀, 세부, 세이하 글로벌 아카데미, 영어, 공부, 영어공부, 학원, 영어학원, 연수, 영어연수, 어학연수, 필리핀어학연수, 가족연수, 캠프, 영어캠프, 가족캠프, 주니어캠프, ESL, TOEIC, TOEFL, IELTS, Cambridge">
+	<meta name="keywords" content="フィリピン、セブ島、SEIHAグローバルアカデミー, 英語、勉強、英語学習、学校、アカデミー、英語アカデミー、トレーニング、英語研修、語学研修、ファミリートレーニング、キャンプ、イングリッシュキャンプ、ファミリーキャンプ、ジュニアキャンプ、ESL、TOEIC、TOEFL、IELTS、ケンブリッジ">
+	<meta name="keywords" content="Philippines, Cebu, SEIHA GLOBAL ACADEMY, tiếng Anh, du học, học tiếng Anh, Trường học, Học viện, học viện tiếng Anh, đào tạo, đào tạo tiếng Anh, đào tạo ngôn ngữ, đào tạo gia đình, trại, trại tiếng Anh, trại gia đình, trại trẻ, ESL, TOEIC, TOEFL, IELTS, Cambridge">
+	<meta name="keywords" content="филиппины, себу, SEIHA GLOBAL ACADEMY, английский, учеба, преподавание, образование, глобальный, школа, семейный лагерь, младший лагерь, ESL, TOEIC, TOEFL, IELTS, Кембридж">
+	<meta name="keywords" content="菲律宾、宿务、Seiha全球学院, 英语、学习、教学、教育、全球、学校、家庭营、初级营、ESL、托业、托福、雅思、剑桥">
+	<meta name="keywords" content="菲律賓、宿務、Seiha全球學院, 英語、學習、教學、教育、全球、學校、家庭營、初級營、ESL、託業、托福、雅思、劍橋">
+	<meta name="keywords" content="الفلبين ، سيبو ، اللغة الإنجليزية ، الدراسة ، التدريس ، التعليم ، العالمية ، المدرسة ، معسكر الأسرة ، المعسكر الصغير ، اللغة الإنجليزية كلغة ثانية ، TOEIC ، TOEFL ، IELTS ، كامبريدج">
+    <meta property="og:title" content="Seiha Global Academy"/>
+    <meta property="og:description" content="Seiha Global Academy" />
+    <meta property="og:url" content="https://seihaglobalacademy.com/" />
+    <meta property="og:type" content="website" />
+
+    <title><%: Page.Title %></title>
+    <%--<asp:PlaceHolder runat="server">     
+          <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>  --%>
+    <%--<webopt:BundleReference runat="server" Path="~/Content/css" />--%>
+    <link rel="shortcut icon" href="~/images/SGAlogoNew.png" type="image/x-icon"/>
+    <link rel="icon" href="~/Images/SGALogo.ico" type="image/x-icon"/> 
+    <link rel="icon" href="~/images/SGAlogoNew.png" type="image/x-icon"/>
+    <link rel="icon" href="~/Images/SGALogo32x32.png" sizes="32x32"/>
+    <link rel="icon" href="~/Images/SGALogo48x48.png" sizes="48x48"/>
+    <link rel="icon" href="~/Images/SGALogo144x144.png" sizes="144x144"/>
+    <meta name="viewport" content="width=device-width" />
+    
+    <!-- Bootstrap core CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="~/assets/css/owl.css">
+    <link rel="stylesheet" href="~/assets/css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/util.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+    <!--===============================================================================================-->
+    <!-- waves.css -->
+    <link rel="stylesheet" href="~/AdminAssets/pages/waves/css/waves.min.css" type="text/css" media="all">
+     <!-- themify icon -->
+    <link rel="stylesheet" type="text/css" href="~/AdminAssets/icon/themify-icons/themify-icons.css"/>
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="~/AdminAssets/icon/icofont/css/icofont.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="~/AdminAssets/icon/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="~/assets/font-awesome-4.7.0/css/font-awesome.min.css"/>
+     <link rel="stylesheet" type="text/css" href="~/assets/css/effect-style.css" media="screen,tv,print"/>
+    <%--<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>--%>
+    <%--<script src="https://hcaptcha.com/1/api.js" async defer></script>--%>
+    <div id="google_translate_element2" style="display:none;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit2() { new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element2'); }
+    </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        eval(function (p, a, c, k, e, r) { e = function (c) { return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) r[e(c)] = k[c] || e(c); k = [function (e) { return r[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}', 43, 43, '||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'), 0, {}))
+        /* ]]> */
+    </script>
+    <!-- GTranslate: https://gtranslate.io/ -->
+</head>
+<body>
+    <form runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+    <header class="header-area header-sticky">
+        <div class="header-top">
+           <div class="container" style="display:flex;">
+               <div class="col-lg-6">
+                   <asp:LinkButton ID="LinkButton5" runat="server" OnClick="lblHomeMain_Click">
+                       <img class="logo" src="../Images/SGAlogoNew.png" onerror="this.onerror=null; this.src='../Images/sgalogo_small.png';" style="margin-top:10px;margin-right:30px;">
+                        <img class="logo" src="../Images/global-runner-logo-1.png"  style="width:160px;margin-top:10px;">
+                   </asp:LinkButton>
+               </div>
+               <div class="socmedtel col-lg-6">
+                   <div class="social-media" style="text-align:right;margin-top: 10px;">
+                        <ul class="social-icons" style="display: inline-block;text-align: center;font-size: 18px;margin: 0;padding: 0;margin-left:13px;">
+                            <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://www.facebook.com/seihaglobalacademy" target="_blank"><i class="fa fa-facebook-official" style="font-size: 30px;color:#898989;" aria-hidden="true"></i></a></li>
+                            <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://www.instagram.com/seihaglobalacademy/" target="_blank"><i class="fa fa-instagram" style="font-size: 30px;color:#898989;" aria-hidden="true"></i></a></li>                     
+                            <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://twitter.com/seihaglobalcebu" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="grey" height="1.8em" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a></li>
+                            <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://www.youtube.com/@SeihaGlobalAcademyCebu" target="_blank"><i class="fa fa-youtube-play" style="font-size: 30px;color:#898989;" aria-hidden="true"></i></a></li>
+                            <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://www.tiktok.com/@seihaglobalacademy" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="grey" class="bi bi-tiktok" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" id="mainIconPathAttribute" stroke-width="0" stroke="#ff0000"></path> </svg></a></li>
+                            <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><div class="line-it-button" data-lang="en" data-type="share-c" data-env="REAL" data-url="http://uptalkcebu" data-color="grey" data-size="small" data-count="false" data-ver="3" style="display: none;"></div></li>
+                        </ul>
+                    </div>
+                   <div style="text-align:right;">
+                       <div>
+                           <i class="icofont icofont-ui-dial-phone" style="color:grey;font-size:24px;"></i>
+                            <span style="font-weight:400;font-size:24px;color:grey;">63-32-236-5044</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <nav class="main-nav" style="background-color:#14a83b; box-shadow: 4px 4px 4px rgba(90,89,76,.4);">
+            <!-- ***** Logo Start ***** -->
+            <%--<a class="header-logo col-md-2">
+                <img class="logo" src="images/SGAlogoNew.png" onerror="this.onerror=null; this.src='../Images/sgalogo_small.png';" style="width:80px;">
+                <img class="logo" src="../Images/global-runner-logo-1.png"  style="width:160px;margin-top:10px;">
+            </a> --%>          
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav" style="justify-content: center;">
+                <li class="has-sub" style="border:none;">
+                    <asp:LinkButton ID="lblAboutUs" runat="server" class="" style="padding: 10px 0px 0px; height: 62px; text-align:center;">
+                        <div class="ja">About Us</div>
+                    </asp:LinkButton>
+                    <ul class="sub-menu">
+                        <li><asp:LinkButton ID="lblHis" runat="server" OnClick="lblHis_Click" style="">
+                                <div id="history" class="ja">History</div>
+                            </asp:LinkButton>
+                        </li>
+                        <li><asp:LinkButton ID="lblMess" runat="server" OnClick="lblMess_Click">
+                                <div id="msgSGADirec" class="ja">Director's Message</div>
+                            </asp:LinkButton>
+                        </li>
+                        <li><asp:LinkButton ID="lblStren" runat="server" OnClick="lblStrength_Click">
+                                <div id="strgthSGA" class="ja">Strengths of SEIHA Global Academy</div>
+                            </asp:LinkButton>
+                        </li>
+                        <li><asp:LinkButton ID="lblWhy" runat="server" OnClick="lblWhy_Click">
+                                <div id="whyCebu" class="ja">Why Study in Cebu</div>
+                            </asp:LinkButton>
+                        </li>
+                        <li><asp:LinkButton ID="lblLocation" runat="server" OnClick="lblLocation_Click">
+                                <div id="location" class="ja">Location</div>
+                            </asp:LinkButton>
+                        </li>
+                    </ul>
+                </li>                              
+                <li class="has-sub">
+                    <asp:LinkButton ID="lblPlans" runat="server" style="padding: 10px 0px 0px; height: 62px; text-align:center;" OnClick="lblPlans_Click">
+                        <div class="ja">Plans and Fees</div>
+                    </asp:LinkButton>
+                    <ul class="sub-menu">
+                        <li><asp:LinkButton ID="lnkbtnPlans" runat="server" OnClick="lblPlans_Click" style="">
+                                <div id="studplans" class="ja">Study Plans</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lnkbtnMess" runat="server" OnClick="lblMess_Click">
+                                <div id="tuition" class="ja">Tuition Fees</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lnkbtnProcedure" runat="server" OnClick="lnkbtnProcedure_Click">
+                                <div id="procedure" class="ja">Procedure</div>
+                            </asp:LinkButton></li>
+                    </ul>
+                </li>
+                <li class="has-sub" >
+                    <asp:LinkButton ID="lblCourse" runat="server" style="padding: 10px 0px 0px; height: 62px; text-align:center;">
+                        <div class="ja">Curriculum</div>
+                    </asp:LinkButton>
+                    <ul class="sub-menu">
+                        <li><asp:LinkButton ID="lblBusEng" runat="server" style="padding: 0 15px;" OnClick="lblBusEng_Click">
+                                <div id="BusiEng" class="ja">Business English</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lblCusRel" runat="server" style="padding: 0 15px;" OnClick="lblCusRel_Click">
+                                <div id="CusRela" class="ja">Customer Relations</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lblFamEng" runat="server" style="padding: 0 15px;" OnClick="lblFamEng_Click">
+                                <div id="FamEng" class="ja">Family English Holiday</div>
+                            </asp:LinkButton></li>     
+                        <li><asp:LinkButton ID="lblGenEng" runat="server" style="padding: 0 15px;" OnClick="lblGenEng_Click">
+                                <div id="GenEng" class="ja">General English</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lblIELTS" runat="server" style="padding: 0 15px;" OnClick="lblIELTS_Click">
+                                <div id="IELTS" class="ja">IELTS</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lblPracEng" runat="server" style="padding: 0 15px;" OnClick="lblPracEng_Click">
+                                <div id="PracEng" class="ja">Practical Classroom English</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lblTOEIC" runat="server" style="padding: 0 15px;" OnClick="lblTOEIC_Click">
+                                <div id="TOEIC" class="ja">TOEIC</div>
+                            </asp:LinkButton></li>                                    
+                        <li><asp:LinkButton ID="lblYLEng" runat="server" style="padding: 0 15px;" OnClick="lblYLEng_Click">
+                                <div id="YoungEng" class="ja">Young Learner English</div>
+                            </asp:LinkButton></li>
+                    </ul>
+                </li>
+                <%--<li class="has-sub">
+                    <asp:LinkButton ID="lblAct" runat="server" style="padding: 10px 0px 0px; height: 62px; text-align:center;">
+                    <div class="ja">Activities</div>
+                    </asp:LinkButton>
+                    <ul class="sub-menu">
+                        <li><asp:LinkButton ID="LinkButton10" runat="server" style="padding: 0 15px;" OnClick="lblBusEng_Click">
+                                <div id="leisure" class="ja">Leisure</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="LinkButton11" runat="server" style="padding: 0 15px;" OnClick="lblCusRel_Click">
+                                <div id="outreach" class="ja">Outreach Program</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="LinkButton12" runat="server" style="padding: 0 15px;" OnClick="lblFamEng_Click">
+                                <div id="immersion" class="ja">Immersion</div>
+                            </asp:LinkButton></li> 
+                    </ul>
+                </li>--%>
+                <li class="has-sub">
+                    <asp:LinkButton ID="lblBull" runat="server" style="padding: 10px 0px 0px; height: 62px; text-align:center;">
+                        <div class="ja">Bulletin</div>                  
+                    </asp:LinkButton>
+                     <ul class="sub-menu">
+                        <li><asp:LinkButton ID="lnkbtnNews" runat="server" style="padding: 0 15px;" OnClick="lnkbtnNews_Click">
+                                <div id="Notice" class="ja">Notice & News</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lnkbtnFAQ" runat="server" style="padding: 0 15px;" OnClick="lnkbtnFAQ_Click">
+                                <div id="FAQ" class="ja">FAQ</div>
+                            </asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lnkbtnTestimonials" runat="server" style="padding: 0 15px;" OnClick="lnkbtnTestimonials_Click">
+                                <div id="Testimonials" class="ja">Testimonials</div>
+                            </asp:LinkButton></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <asp:LinkButton ID="lblGall" runat="server" style="padding: 10px 0px 0px; height: 62px; text-align:center;">
+                        <div class="ja">Gallery</div>
+                    </asp:LinkButton>
+                    <ul class="sub-menu">
+                        <li><asp:LinkButton ID="lnkbtnFacilities" runat="server" style="padding: 0 15px;" OnClick="lblGall_Click">
+                                <div id="Facilities" class="ja">Facilities</div>
+                            </asp:LinkButton></li>
+
+                        <li><asp:LinkButton ID="lnkbtnActivities" runat="server" style="padding: 0 15px;" OnClick="lblAct_Click">
+                                <div id="Activities" class="ja">Activities</div>
+                            </asp:LinkButton></li>
+                        
+                            
+                        
+
+                        
+                            
+                        
+
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <asp:LinkButton ID="lnkTranslate" runat="server" style="padding: 10px 0px 0px; height: 62px; text-align:center;">
+                        <div class="ja">Translate</div>
+                    </asp:LinkButton>
+                    <ul class="sub-menu">
+                        <li>								
+							<a href="#" onclick="doGTranslate('en|ja');return false;">&nbsp; NIHONGO</a>
+						</li>
+                        <li>								
+							<a href="#" onclick="doGTranslate('en|ar');return false;">&nbsp; Arabic</a>
+						</li>
+						<li>								
+							<a href="#" onclick="doGTranslate('en|zh-CN');return false;">&nbsp; Chinese (Simplified)</a>
+						</li>
+						<li>								
+							<a href="#" onclick="doGTranslate('en|zh-TW');return false;">&nbsp; Chinese (Traditional)</a>
+						</li>
+						<li>								
+							<a href="#" onclick="doGTranslate('en|en');return false;">&nbsp; English</a>
+						</li>
+						<li>								
+							<a href="#" onclick="doGTranslate('en|id');return false;">&nbsp; Indonesian</a>
+						</li>
+						<li>								
+							<a href="#" onclick="doGTranslate('en|it');return false;">&nbsp; Italian</a>
+						</li>						
+						<li>								
+							<a href="#" onclick="doGTranslate('en|ko');return false;">&nbsp; Korean</a>
+						</li>
+						<li>								
+							<a href="#" onclick="doGTranslate('en|mn');return false;">&nbsp; Mongolian</a>
+						</li>
+						<li>								
+							<a href="#" onclick="doGTranslate('en|ru');return false;">&nbsp; Russian</a>
+						</li>
+						<li>								
+							<a href="#" onclick="doGTranslate('en|es');return false;">&nbsp; Spanish</a>
+						</li>
+						<li>								
+							<a href="#" onclick="doGTranslate('en|th');return false;">&nbsp; Thai</a>
+						</li>
+						<li>								
+							<a href="#" onclick="doGTranslate('en|vi');return false;">&nbsp; Vietnamese</a>
+						</li>
+					</ul>
+                </li>
+                <%--<li><asp:LinkButton ID="lblHomeMain" runat="server" style="padding: 0 15px; height: auto; text-align:center;" CssClass="active" OnClick="lblHomeMain_Click">
+                    <div class="ja">Home</div>
+                    
+                    </asp:LinkButton>
+                </li>    --%>   
+                <%--<li><asp:LinkButton ID="lblEnroll" runat="server" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblEnroll_Click">
+                    <div class="ja">Enroll Now!</div>
+                    
+                    </asp:LinkButton>
+                </li>--%>
+                <li>
+                    <a ID="lnkEmail" runat="server" style="padding: 10px 0px 0px; height: 62px; text-align:center;" href="mailto:uptalk.reserve@gmail.com">
+                        <i class="ti-email" style="font-size:40px;"></i>
+                    </a>
+                </li>
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+        </nav>
+    </header>
+    <div id="body" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0" >
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <asp:ContentPlaceHolder runat="server" ID="MainContent" />    
+        <asp:ContentPlaceHolder runat="server" ID="MainFooter" />
+        <div class="fixed_btn pc-only">
+            <asp:LinkButton ID="sidelnkbtnLoc" runat="server" OnClick="lblLocation_Click"><img src="../Images/google-maps-icon-3d-11.jpg" alt="私たちの場所" class=""></asp:LinkButton>
+        </div>
+        <section class="contact-us" id="contact" style="background: linear-gradient(180deg,#3cba92 10%, #0ba360 100%);line-height: 30.1px;padding:20px;">
+            <%--<img class="logo" src="images/SGAlogoNew.png" onerror="this.onerror=null; this.src='../Images/sgalogo_small.png';" style="width:150px;margin-top:10px;margin-right:30px;">--%>
+            <div class="social-media">
+                <ul class="social-icons" style="display: inline-block;text-align: center;font-size: 18px;margin: 0;padding: 0;margin-left:13px;">
+                    <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://www.facebook.com/seihaglobal.ph" target="_blank"><i class="fa fa-facebook-official" style="font-size: 30px;color:#fff;" aria-hidden="true"></i></a></li>
+                    <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://www.instagram.com/seiha_global_academy_cebu/?hl=en" target="_blank"><i class="fa fa-instagram" style="font-size: 30px;color:#fff;" aria-hidden="true"></i></a></li>                     
+                    <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://twitter.com/seiha_network" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="white" height="1.8em" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a></li>
+                    <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://www.youtube.com/@SeihaGlobalAcademy" target="_blank"><i class="fa fa-youtube-play" style="font-size: 30px;color:#fff;" aria-hidden="true"></i></a></li>
+                    <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://www.pinterest.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="white" class="bi bi-tiktok" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" id="mainIconPathAttribute" stroke-width="0" stroke="#ff0000"></path> </svg></a></li>
+                    <li style="display: block;position: relative;float: left;text-align:center;margin: 5px;"><a href="https://www.pinterest.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="white" class="bi bi-line" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0ZM5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.154.154 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157Zm.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156h-.562Zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832a.17.17 0 0 0-.013-.015v-.001a.139.139 0 0 0-.01-.01l-.003-.003a.092.092 0 0 0-.011-.009h-.001L7.88 4.79l-.003-.002a.029.029 0 0 0-.005-.003l-.008-.005h-.002l-.003-.002-.01-.004-.004-.002a.093.093 0 0 0-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.154.154 0 0 0 .039.038l.001.001.01.006.004.002a.066.066 0 0 0 .008.004l.007.003.005.002a.168.168 0 0 0 .01.003h.003a.155.155 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156h-.561Zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.155.155 0 0 0-.108.044h-.001l-.001.002-.002.003a.155.155 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.155.155 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z" id="mainIconPathAttribute"></path> </svg></a></li>
+                </ul>
+            </div>
+            <div class="row" style="margin-left:20px;">
+               <div class="col-lg-3">
+                  <div class="footer-navi">
+                    <ul>
+                        <li class="has-sub" style="border:none; border-bottom: 1px solid #f3f1f1;">
+                            <asp:LinkButton ID="LinkButton14" runat="server" style="height: auto; text-align:center;color: white;font-size:22px;">
+                                About Us
+                            </asp:LinkButton>
+                        </li>                              
+                        <li class="linklist_footer">
+                            <asp:LinkButton ID="footerlnkbtnHis" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblHis_Click">
+                              >  History
+                            </asp:LinkButton>
+                        </li>
+                        <li class="linklist_footer">
+                            <asp:LinkButton ID="footerlnkbtnMess" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblMess_Click">
+                              >  Message from the Director
+                            </asp:LinkButton>
+                        </li>
+                        <li class="linklist_footer">
+                            <asp:LinkButton ID="footerlnkbtnStrg" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblStrength_Click">
+                              >  Strengths of SGA
+                            </asp:LinkButton>
+                        </li>
+                        <li class="linklist_footer">
+                            <asp:LinkButton ID="footerlnkbtnWhy" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblWhy_Click">
+                              >  Why Study in Cebu?
+                            </asp:LinkButton>
+                        </li>
+                        <li class="linklist_footer">
+                            <asp:LinkButton ID="footerlnkbtnLoc" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblLocation_Click">
+                             >  Location
+                            </asp:LinkButton>
+                        </li>       
+                    </ul> 
+                  </div>
+                </div>
+                <div class="col-lg-3" >
+                   <div class="footer-navi">
+                        <ul>
+                            <li class="has-sub" style="border-bottom: 1px solid #f3f1f1;">
+                                <asp:LinkButton ID="LinkButton" runat="server" style="height: auto; text-align:center;color: white;font-size:22px;">
+                                    Plans & Fees
+                                </asp:LinkButton>
+                            </li>                              
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnPlans" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblPlans_Click">
+                                    >  Study Plans
+                                </asp:LinkButton>
+                            </li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnTui" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;">
+                                    >  Tuition Fees
+                                </asp:LinkButton>
+                            </li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnProd" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lnkbtnProcedure_Click">
+                                    >  Procedure
+                                </asp:LinkButton>
+                            </li>
+                               
+                        </ul>   
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="footer-navi">
+                        <ul>
+                            <li class="has-sub" style="border-bottom: 1px solid #f3f1f1;">
+                                <asp:LinkButton ID="LinkButton18" runat="server" style="height: auto; text-align:center;color: white;font-size:22px;">
+                                    Curriculum
+                                </asp:LinkButton>
+                            </li> 
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnBusEng" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblBusEng_Click">
+                                    >  Business English
+                                </asp:LinkButton>
+                            </li>                              
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnCusRel" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblCusRel_Click">
+                                    >  Customer Relations English
+                                </asp:LinkButton>
+                            </li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnFamHol" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblFamEng_Click">
+                                    >  Family Holiday English
+                                </asp:LinkButton></li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnGenEng" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblGenEng_Click">
+                                    >  General English
+                                </asp:LinkButton></li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnIELTS" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblIELTS_Click">
+                                    >  IELTS
+                                </asp:LinkButton>
+                            </li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnPracClss" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblPracEng_Click">
+                                    >  Practical Classroom English
+                                </asp:LinkButton>
+                            </li>       
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnTOIEC" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblTOEIC_Click">
+                                    >  TOIEC
+                                </asp:LinkButton>
+                            </li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnYngLrn" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lblYLEng_Click">
+                                    >  Very young/Young Learners English
+                                </asp:LinkButton>
+                            </li>
+                        </ul> 
+                     </div>
+                  </div>
+<%--                  <div class="col-lg-2">
+                     <div class="footer-navi">
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="LinkButton27" runat="server" style=" height: auto; text-align:center;font-size:22px;color: white;">
+                                Activities
+                                </asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="footerlnkbtnLeis" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;">
+                                Leisure
+                                </asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="footerlnkbtnOutProg" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;">
+                                Outreach Program
+                                </asp:LinkButton>
+                            </li>
+                               
+                            <li>
+                                <asp:LinkButton ID="footerlnkbtnImmer" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;">
+                                Immersion
+                                </asp:LinkButton>
+                            </li>
+                        </ul> 
+                   </div>
+                </div>--%>
+                <%--<div class="col-lg-2">
+                   <div class="footer-navi">
+                        <ul>
+                            <li>
+                                <asp:LinkButton ID="LinkButton29" runat="server" style="height: auto; text-align:center;font-size:22px;color: white;">
+                                Facilities
+                                </asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="footerlnkbtnAccom" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;">
+                                Accommodations
+                                </asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="footerlnkbtnLearnFac" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;">
+                                Learning Facilities
+                                </asp:LinkButton>
+                            </li>
+                                
+                            <li>
+                                <asp:LinkButton ID="footerlnkbtnServFac" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;">
+                                Service Facilities
+                                </asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="footerlnkbtnNearSGA" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;">
+                                Places Near SGA
+                                </asp:LinkButton>
+                            </li>
+                        </ul> 
+                    </div>
+                </div>--%>
+                <div class="col-lg-3">
+                    <div class="footer-navi">
+                        <ul>
+                            <li style="border-bottom: 1px solid #f3f1f1;">
+                                <asp:LinkButton ID="LinkButton36" runat="server" style="height: auto; text-align:center;font-size:22px;color: white;">
+                                Gallery
+                                </asp:LinkButton>
+                            </li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnPhotos" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;">
+                                >  Photos
+                                </asp:LinkButton>
+                            </li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnVideos" runat="server" class="poptext" style="padding: 0 15px;height: auto; text-align:center;">
+                                >  Videos
+                                </asp:LinkButton>
+                            </li>
+                            <li style="border-bottom: 1px solid #f3f1f1;">
+                                <asp:LinkButton ID="LinkButton39" runat="server" style="height: auto; text-align:center;font-size:22px;color: white;">
+                                Bulletin
+                                </asp:LinkButton>
+                            </li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnNotNews" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lnkbtnNews_Click">
+                                >  Notice & News
+                                </asp:LinkButton>
+                            </li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnFAQ" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lnkbtnFAQ_Click">
+                                >  FAQ
+                                </asp:LinkButton>
+                            </li>
+                            <li class="linklist_footer">
+                                <asp:LinkButton ID="footerlnkbtnTesti" runat="server" class="poptext" style="padding: 0 15px; height: auto; text-align:center;" OnClick="lnkbtnTestimonials_Click">
+                                >  Testimonials
+                                </asp:LinkButton>
+
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section class="contact-us" id="contacts">
+            <div style="text-align:center;margin-top: 30px;width:100%;font-family:Trebuchet MS;color:#595959;">
+                <p style="color:#595959;font-size:22px;">Seiha Global Academy Inc.</p>
+                <p style="color:#595959;">18<sup>th</sup> floor, IT Tower 2, Bohol St., Archbishop Reyes Ave., Cebu Business Park, Cebu City, Philippines 6000</p>
+                <p style="color:#595959;">TEL 63-32-236-5044 / EMAIL <u>customer.sga@seiha.com</u> / WEBSITE www.seihaglobalacademy.com</p>
+                <div class="thumb-contact">
+                    <img src="../assets/images/tesda.png" alt="Tesda" style="width:100px;">
+                </div>
+                <div class="contact-content">                
+                    <p>Accredited by TESDA</p>
+                </div>
+                <p style="color:#595959;">&copy; Copyright <u>www.seihaglobalacademy.com</u> , All rights reserved  <%: DateTime.Now.Year %></p>
+            </div>
+             <script src="//code.tidio.co/otwnmfbpohtjz33k5exndgb0knn9wrjk.js" async></script>   
+            <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="ti-arrow-up"></i></a>
+        </section>
+    </div>
+
+    </form>
+    <!-- Bootstrap core JavaScript -->
+    <%--<script src="vendor/jquery/jquery.min.js"></script>--%>
+    <!-- Scripts -->
+    <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <%--<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>--%>
+    <script src="../assets/js/isotope.min.js"></script>
+    <script src="../assets/js/owl-carousel.js"></script>
+    <script src="../assets/js/lightbox.js"></script>
+    <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/video.js"></script>
+    <script src="../assets/js/slick-slider.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <!-- Scripts -->
+    <asp:ContentPlaceHolder ID="forJScript" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- sweet alert js -->
+    <script type="text/javascript" src="../AdminAssets/bower_components/sweetalert/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../AdminAssets/js/modal.js"></script>
+    <!-- sweet alert modal.js intialize js -->
+    <!-- modalEffects js nifty modal window effects -->
+    <script src="../AdminAssets/js/classie.js"></script>
+    <script type="text/javascript" src="../AdminAssets/js/modalEffects.js"></script>
+    <script src="../AdminAssets/js/pcoded.min.js"></script>
+    <script src="../AdminAssets/js/vertical/vertical-layout.min.js"></script>
+    <script src="../AdminAssets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Custom js -->
+    <script type="text/javascript" src="../AdminAssets/js/script.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+            var
+            direction = section.replace(/#/, ''),
+            reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+            reqSectionPos = reqSection.offset().top - 0;
+
+            if (isAnimate) {
+                $('body, html').animate({
+                    scrollTop: reqSectionPos
+                },
+                800);
+            } else {
+                $('body, html').scrollTop(reqSectionPos);
+            }
+
+        };
+
+        var checkSection = function checkSection() {
+            $('.section').each(function () {
+                var
+                $this = $(this),
+                topEdge = $this.offset().top - 80,
+                bottomEdge = topEdge + $this.height(),
+                wScroll = $(window).scrollTop();
+                if (topEdge < wScroll && bottomEdge > wScroll) {
+                    var
+                    currentId = $this.data('section'),
+                    reqLink = $('a').filter('[' + currentId + ']');
+                    reqLink.closest('li').addClass('active').
+                    siblings().removeClass('active');
+                }
+            });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+            e.preventDefault();
+            showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+            checkSection();
+        });
+        function scrollToDiv() {
+            var div = document.getElementById("contact");
+            div.scrollIntoView().animate({ scrollTop: 0 }, "slow");
+            this.lblConUs.addClass('active');
+            siblings().removeClass('active');
+        }
+        function showPass() {
+            var x = document.getElementById("txtPassword");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        function showTab(tabId, tabLink) {
+            // Hide all tabs
+            var tabs = document.querySelectorAll('#tabContainer > div');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+
+            // Show the selected tab
+            var selectedTab = document.getElementById(tabId);
+            selectedTab.classList.add('active');
+
+            // Add the active class to the tab button
+            var tabButtons = document.querySelectorAll('#tablst  a');
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+            tabLink.classList.add('active');
+        }
+        </script>
+</body>
+</html>

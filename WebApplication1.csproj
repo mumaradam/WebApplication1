@@ -1,0 +1,1335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9562805-64C3-4235-9C88-5A53C68BB6C1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.8.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.24\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.4.5.6\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.1\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.0\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AboutUs\Activities.aspx" />
+    <Content Include="AboutUs\Gallery.aspx" />
+    <Content Include="AboutUs\History.aspx" />
+    <Content Include="AboutUs\Message.aspx" />
+    <Content Include="AboutUs\Strength.aspx" />
+    <Content Include="AboutUs\WhyCebu.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="AdminAssets\bower_components\bootstrap-daterangepicker\css\daterangepicker.css" />
+    <Content Include="AdminAssets\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css" />
+    <Content Include="AdminAssets\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net-buttons\js\buttons.html5.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net-buttons\js\buttons.print.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net-buttons\js\dataTables.buttons.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css" />
+    <Content Include="AdminAssets\bower_components\datatables.net-responsive-bs4\js\responsive.bootstrap4.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net\js\jquery.dataTables.min.js" />
+    <Content Include="AdminAssets\bower_components\datedropper\css\datedropper.min.css" />
+    <Content Include="AdminAssets\bower_components\owl.carousel\js\owl.carousel.min.js" />
+    <Content Include="AdminAssets\bower_components\sweetalert\js\sweetalert.min.js" />
+    <Content Include="AdminAssets\css\animate.css\css\animate.css" />
+    <Content Include="AdminAssets\css\aos.css" />
+    <Content Include="AdminAssets\css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="AdminAssets\css\chartist\chartist.css" />
+    <Content Include="AdminAssets\css\font-awesome.min.css" />
+    <Content Include="AdminAssets\css\ionicons.css" />
+    <Content Include="AdminAssets\css\jquery.mCustomScrollbar.css" />
+    <Content Include="AdminAssets\css\morris.js\css\morris.css" />
+    <Content Include="AdminAssets\css\style.css" />
+    <Content Include="AdminAssets\icon\flag-icons\css\flag-icon.css" />
+    <Content Include="AdminAssets\icon\font-awesome\css\font-awesome.css" />
+    <Content Include="AdminAssets\icon\font-awesome\css\font-awesome.min.css" />
+    <Content Include="AdminAssets\icon\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="AdminAssets\icon\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\font-awesome.css" />
+    <Content Include="AdminAssets\icon\icofont\css\icofont.css" />
+    <Content Include="AdminAssets\icon\icofont\fonts\icofont.svg" />
+    <Content Include="AdminAssets\icon\themify-icons\fonts\themify.svg" />
+    <Content Include="AdminAssets\icon\themify-icons\themify-icons.css" />
+    <Content Include="AdminAssets\images\d1.jpg" />
+    <Content Include="AdminAssets\images\d2.jpg" />
+    <Content Include="AdminAssets\images\d3.jpg" />
+    <Content Include="AdminAssets\images\d4.jpg" />
+    <Content Include="AdminAssets\images\d5.jpg" />
+    <Content Include="AdminAssets\images\d6.jpg" />
+    <Content Include="AdminAssets\images\d7.jpg" />
+    <Content Include="AdminAssets\images\d8.jpg" />
+    <Content Include="AdminAssets\images\d9.jpg" />
+    <Content Include="AdminAssets\js\aos.js" />
+    <Content Include="AdminAssets\js\bootstrap-growl.min.js" />
+    <Content Include="AdminAssets\js\bootstrap\js\bootstrap.min.js" />
+    <Content Include="AdminAssets\js\chart.js\Chart.js" />
+    <Content Include="AdminAssets\js\classie.js" />
+    <Content Include="AdminAssets\js\common-pages.js" />
+    <Content Include="AdminAssets\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="AdminAssets\js\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="AdminAssets\js\jquery-ui\jquery-ui.js" />
+    <Content Include="AdminAssets\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="AdminAssets\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="AdminAssets\js\jquery.mousewheel.min.js" />
+    <Content Include="AdminAssets\js\jquery\jquery-ui.min.js" />
+    <Content Include="AdminAssets\js\jquery\jquery.min.js" />
+    <Content Include="AdminAssets\js\modal.js" />
+    <Content Include="AdminAssets\js\modalEffects.js" />
+    <Content Include="AdminAssets\js\modernizr\css-scrollbars.js" />
+    <Content Include="AdminAssets\js\modernizr\modernizr.js" />
+    <Content Include="AdminAssets\js\morris-custom-chart.js" />
+    <Content Include="AdminAssets\js\morris.js\morris.js" />
+    <Content Include="AdminAssets\js\owl-custom.js" />
+    <Content Include="AdminAssets\js\pcoded.min.js" />
+    <Content Include="AdminAssets\js\popper.js\popper.min.js" />
+    <Content Include="AdminAssets\js\raphael\raphael.min.js" />
+    <Content Include="AdminAssets\js\script.js" />
+    <Content Include="AdminAssets\js\script.min.js" />
+    <Content Include="AdminAssets\js\SmoothScroll.js" />
+    <Content Include="AdminAssets\js\vertical-layout.min.js" />
+    <Content Include="AdminAssets\js\vertical\vertical-layout.min.js" />
+    <Content Include="AdminAssets\pages\accordion\accordion.js" />
+    <Content Include="AdminAssets\pages\accordion\accordion.min.js" />
+    <Content Include="AdminAssets\pages\advance-elements\css\bootstrap-datetimepicker.css" />
+    <Content Include="AdminAssets\pages\chart\echarts\js\echarts-all.js" />
+    <Content Include="AdminAssets\pages\ckeditor\ckeditor.js" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\css\amchart.css" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\css\export.css" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\amcharts.js" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\custom-amchart.js" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\export.min.js" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\images\dragIconRoundBig.svg" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\images\dragIconRoundBigH.svg" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\light.js" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\serial.js" />
+    <Content Include="AdminAssets\pages\dashboard\custom-dashboard.js" />
+    <Content Include="AdminAssets\pages\data-table\css\buttons.dataTables.min.css" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\css\buttons.dataTables.min.css" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\buttons.colVis.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\buttons.flash.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\dataTables.buttons.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\extension-btns-custom.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\jszip.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\vfs_fonts.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\responsive\css\responsive.dataTables.css" />
+    <Content Include="AdminAssets\pages\data-table\extensions\responsive\js\dataTables.responsive.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\responsive\js\responsive-custom.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\select\js\dataTables.select.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\select\js\select-custom.js" />
+    <Content Include="AdminAssets\pages\data-table\js\data-table-custom.js" />
+    <Content Include="AdminAssets\pages\data-table\js\jszip.min.js" />
+    <Content Include="AdminAssets\pages\data-table\js\pdfmake.min.js" />
+    <Content Include="AdminAssets\pages\data-table\js\vfs_fonts.js" />
+    <Content Include="AdminAssets\pages\edit-table\editable.js" />
+    <Content Include="AdminAssets\pages\edit-table\jquery.tabledit.js" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\css\bootstrap.min.css" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\css\style.css" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\css\vegas.min.css" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\js\bootstrap.min.js" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\js\bubble.js" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\js\jquery.min.js" />
+    <Content Include="AdminAssets\pages\extra-pages\comming-soon\css\style-minimal-flat.css" />
+    <Content Include="AdminAssets\pages\extra-pages\comming-soon\js\bootstrap.min.js" />
+    <Content Include="AdminAssets\pages\extra-pages\comming-soon\js\jquery.easings.min.js" />
+    <Content Include="AdminAssets\pages\extra-pages\comming-soon\js\jquery.min.js" />
+    <Content Include="AdminAssets\pages\extra-pages\comming-soon\js\jquery.slitslider.js" />
+    <Content Include="AdminAssets\pages\extra-pages\comming-soon\js\main-flat.js" />
+    <Content Include="AdminAssets\pages\extra-pages\comming-soon\js\modernizr.custom.js" />
+    <Content Include="AdminAssets\pages\extra-pages\comming-soon\js\particles.js" />
+    <Content Include="AdminAssets\pages\google-maps\gmaps.js" />
+    <Content Include="AdminAssets\pages\google-maps\google-maps.js" />
+    <Content Include="AdminAssets\pages\icon-modal.js" />
+    <Content Include="AdminAssets\pages\isotope\isotope.pkgd.min.js" />
+    <Content Include="AdminAssets\pages\isotope\jquery.isotope.js" />
+    <Content Include="AdminAssets\pages\notification\notification.css" />
+    <Content Include="AdminAssets\pages\notification\notification.js" />
+    <Content Include="AdminAssets\pages\todo\todo.js" />
+    <Content Include="AdminAssets\pages\user-profile.js" />
+    <Content Include="AdminAssets\pages\waves\css\waves.min.css" />
+    <Content Include="AdminAssets\pages\waves\js\waves.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\amcharts.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\amcharts.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\export.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\gauge.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\gauge.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\light.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\light.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\pie.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\pie.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\serial.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\serial.min.js" />
+    <Content Include="AdminAssets\pages\widget\excanvas.js" />
+    <Content Include="AdminAssets\bower_components\bootstrap-daterangepicker\css\daterangepicker.css" />
+    <Content Include="AdminAssets\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css" />
+    <Content Include="AdminAssets\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net-buttons\js\buttons.html5.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net-buttons\js\buttons.print.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net-buttons\js\dataTables.buttons.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css" />
+    <Content Include="AdminAssets\bower_components\datatables.net-responsive-bs4\js\responsive.bootstrap4.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js" />
+    <Content Include="AdminAssets\bower_components\datatables.net\js\jquery.dataTables.min.js" />
+    <Content Include="AdminAssets\bower_components\datedropper\css\datedropper.min.css" />
+    <Content Include="AdminAssets\bower_components\sweetalert\js\sweetalert.min.js" />
+    <Content Include="AdminAssets\css\animate.css\css\animate.css" />
+    <Content Include="AdminAssets\css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="AdminAssets\css\chartist\chartist.css" />
+    <Content Include="AdminAssets\css\font-awesome.min.css" />
+    <Content Include="AdminAssets\css\ionicons.css" />
+    <Content Include="AdminAssets\css\jquery.mCustomScrollbar.css" />
+    <Content Include="AdminAssets\css\morris.js\css\morris.css" />
+    <Content Include="AdminAssets\css\style.css" />
+    <Content Include="AdminAssets\icon\font-awesome\css\font-awesome.css" />
+    <Content Include="AdminAssets\icon\font-awesome\css\font-awesome.min.css" />
+    <Content Include="AdminAssets\icon\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="AdminAssets\icon\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\font-awesome.css" />
+    <Content Include="AdminAssets\icon\icofont\css\icofont.css" />
+    <Content Include="AdminAssets\icon\icofont\fonts\icofont.svg" />
+    <Content Include="AdminAssets\icon\themify-icons\fonts\themify.svg" />
+    <Content Include="AdminAssets\icon\themify-icons\themify-icons.css" />
+    <Content Include="AdminAssets\images\d1.jpg" />
+    <Content Include="AdminAssets\images\d2.jpg" />
+    <Content Include="AdminAssets\images\d3.jpg" />
+    <Content Include="AdminAssets\images\d4.jpg" />
+    <Content Include="AdminAssets\images\d5.jpg" />
+    <Content Include="AdminAssets\images\d6.jpg" />
+    <Content Include="AdminAssets\images\d7.jpg" />
+    <Content Include="AdminAssets\images\d8.jpg" />
+    <Content Include="AdminAssets\images\d9.jpg" />
+    <Content Include="AdminAssets\js\bootstrap-growl.min.js" />
+    <Content Include="AdminAssets\js\bootstrap\js\bootstrap.min.js" />
+    <Content Include="AdminAssets\js\chart.js\Chart.js" />
+    <Content Include="AdminAssets\js\classie.js" />
+    <Content Include="AdminAssets\js\common-pages.js" />
+    <Content Include="AdminAssets\js\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="AdminAssets\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="AdminAssets\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="AdminAssets\js\jquery.mousewheel.min.js" />
+    <Content Include="AdminAssets\js\jquery\jquery-ui.min.js" />
+    <Content Include="AdminAssets\js\jquery\jquery.min.js" />
+    <Content Include="AdminAssets\js\modal.js" />
+    <Content Include="AdminAssets\js\modalEffects.js" />
+    <Content Include="AdminAssets\js\modernizr\css-scrollbars.js" />
+    <Content Include="AdminAssets\js\modernizr\modernizr.js" />
+    <Content Include="AdminAssets\js\morris-custom-chart.js" />
+    <Content Include="AdminAssets\js\morris.js\morris.js" />
+    <Content Include="AdminAssets\js\pcoded.min.js" />
+    <Content Include="AdminAssets\js\popper.js\popper.min.js" />
+    <Content Include="AdminAssets\js\raphael\raphael.min.js" />
+    <Content Include="AdminAssets\js\script.js" />
+    <Content Include="AdminAssets\js\script.min.js" />
+    <Content Include="AdminAssets\js\SmoothScroll.js" />
+    <Content Include="AdminAssets\js\vertical-layout.min.js" />
+    <Content Include="AdminAssets\js\vertical\vertical-layout.min.js" />
+    <Content Include="AdminAssets\pages\accordion\accordion.js" />
+    <Content Include="AdminAssets\pages\accordion\accordion.min.js" />
+    <Content Include="AdminAssets\pages\advance-elements\css\bootstrap-datetimepicker.css" />
+    <Content Include="AdminAssets\pages\chart\echarts\js\echarts-all.js" />
+    <Content Include="AdminAssets\pages\ckeditor\ckeditor.js" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\css\amchart.css" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\css\export.css" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\amcharts.js" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\custom-amchart.js" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\export.min.js" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\images\dragIconRoundBig.svg" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\images\dragIconRoundBigH.svg" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\light.js" />
+    <Content Include="AdminAssets\pages\dashboard\amchart\js\serial.js" />
+    <Content Include="AdminAssets\pages\dashboard\custom-dashboard.js" />
+    <Content Include="AdminAssets\pages\data-table\css\buttons.dataTables.min.css" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\css\buttons.dataTables.min.css" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\buttons.colVis.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\buttons.flash.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\dataTables.buttons.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\extension-btns-custom.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\jszip.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\buttons\js\vfs_fonts.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\responsive\css\responsive.dataTables.css" />
+    <Content Include="AdminAssets\pages\data-table\extensions\responsive\js\dataTables.responsive.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\responsive\js\responsive-custom.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\select\js\dataTables.select.min.js" />
+    <Content Include="AdminAssets\pages\data-table\extensions\select\js\select-custom.js" />
+    <Content Include="AdminAssets\pages\data-table\js\data-table-custom.js" />
+    <Content Include="AdminAssets\pages\data-table\js\jszip.min.js" />
+    <Content Include="AdminAssets\pages\data-table\js\pdfmake.min.js" />
+    <Content Include="AdminAssets\pages\data-table\js\vfs_fonts.js" />
+    <Content Include="AdminAssets\pages\edit-table\editable.js" />
+    <Content Include="AdminAssets\pages\edit-table\jquery.tabledit.js" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\css\bootstrap.min.css" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\css\style.css" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\css\vegas.min.css" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\js\bootstrap.min.js" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\js\bubble.js" />
+    <Content Include="AdminAssets\pages\extra-pages\404\1\js\jquery.min.js" />
+    <Content Include="AdminAssets\pages\google-maps\gmaps.js" />
+    <Content Include="AdminAssets\pages\google-maps\google-maps.js" />
+    <Content Include="AdminAssets\pages\icon-modal.js" />
+    <Content Include="AdminAssets\pages\isotope\isotope.pkgd.min.js" />
+    <Content Include="AdminAssets\pages\isotope\jquery.isotope.js" />
+    <Content Include="AdminAssets\pages\notification\notification.css" />
+    <Content Include="AdminAssets\pages\notification\notification.js" />
+    <Content Include="AdminAssets\pages\todo\todo.js" />
+    <Content Include="AdminAssets\pages\user-profile.js" />
+    <Content Include="AdminAssets\pages\waves\css\waves.min.css" />
+    <Content Include="AdminAssets\pages\waves\js\waves.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\amcharts.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\amcharts.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\export.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\gauge.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\gauge.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\light.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\light.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\pie.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\pie.min.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\serial.js" />
+    <Content Include="AdminAssets\pages\widget\amchart\serial.min.js" />
+    <Content Include="AdminAssets\pages\widget\excanvas.js" />
+    <Content Include="assets\css\aos.css" />
+    <Content Include="assets\css\effect-style.css" />
+    <Content Include="assets\css\fancybox.min.css" />
+    <Content Include="assets\css\flex-slider.css" />
+    <Content Include="assets\css\fontawesome.css" />
+    <Content Include="assets\css\lightbox.css" />
+    <Content Include="assets\css\magnific-popup.css" />
+    <Content Include="assets\css\material-design-iconic-font.min.css" />
+    <Content Include="assets\css\owl.css" />
+    <Content Include="assets\css\slidercaptcha.css" />
+    <Content Include="assets\css\slidercaptcha.min.css" />
+    <Content Include="assets\css\templatemo-edu-meeting.css" />
+    <Content Include="assets\css\util.css" />
+    <Content Include="assets\css\widget.1.20.0.1.css" />
+    <Content Include="assets\fonts\flexslider-icon.svg" />
+    <Content Include="assets\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="assets\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="assets\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="assets\fonts\slick.svg" />
+    <Content Include="assets\images\#3 %281%29.jpg" />
+    <Content Include="assets\images\247 Customer service.JPG" />
+    <Content Include="assets\images\306273187_547788167148752_1417185617324383845_n.jpg" />
+    <Content Include="assets\images\88owl.png" />
+    <Content Include="assets\images\Accommodation.jpg" />
+    <Content Include="assets\images\apply-bg.jpg" />
+    <Content Include="assets\images\arrowdownp.png" />
+    <Content Include="assets\images\border.JPG" />
+    <Content Include="assets\images\bullts.png" />
+    <Content Include="assets\images\captcha\Pic0.jpg" />
+    <Content Include="assets\images\captcha\Pic1.jpg" />
+    <Content Include="assets\images\captcha\Pic2.jpg" />
+    <Content Include="assets\images\captcha\Pic3.jpg" />
+    <Content Include="assets\images\captcha\Pic4.jpg" />
+    <Content Include="assets\images\captcha\Pic0.jpg" />
+    <Content Include="assets\images\captcha\Pic1.jpg" />
+    <Content Include="assets\images\captcha\Pic2.jpg" />
+    <Content Include="assets\images\captcha\Pic3.jpg" />
+    <Content Include="assets\images\captcha\Pic4.jpg" />
+    <Content Include="assets\images\arrowdownp.png" />
+    <Content Include="assets\images\border.JPG" />
+    <Content Include="assets\images\bullts.png" />
+    <Content Include="assets\images\close.png" />
+    <Content Include="assets\images\Complete language training.JPG" />
+    <Content Include="assets\images\course-01.jpg" />
+    <Content Include="assets\images\course-02.jpg" />
+    <Content Include="assets\images\course-03.jpg" />
+    <Content Include="assets\images\course-04.jpg" />
+    <Content Include="assets\images\Courses\#3 %281%29.jpg" />
+    <Content Include="assets\images\Courses\10 Business English 2.jpg" />
+    <Content Include="assets\images\Courses\11 Customer Relations 1.jpg" />
+    <Content Include="assets\images\Courses\12 Practical Classroom English 1.JPG" />
+    <Content Include="assets\images\Courses\13 Family English Holiday 2.JPG" />
+    <Content Include="assets\images\Courses\6 Young Learners English 1.jpg" />
+    <Content Include="assets\images\Courses\7 General English 1.jpg" />
+    <Content Include="assets\images\Courses\8 TOEIC.JPG" />
+    <Content Include="assets\images\Courses\9 IELTS.jpg" />
+    <Content Include="assets\images\Courses\Busengcrop.jpg" />
+    <Content Include="assets\images\Courses\busicon.PNG" />
+    <Content Include="assets\images\Courses\Business English 3.jpg" />
+    <Content Include="assets\images\Courses\bussEng1.jpg" />
+    <Content Include="assets\images\Courses\bussengHeadImg.png" />
+    <Content Include="assets\images\Courses\citu.png" />
+    <Content Include="assets\images\Courses\crop2english.jpg" />
+    <Content Include="assets\images\Courses\crop3english.jpg" />
+    <Content Include="assets\images\Courses\Customer Relations English.jpg" />
+    <Content Include="assets\images\Courses\custrelations1.jpg" />
+    <Content Include="assets\images\Courses\custrelationsHeadImg.png" />
+    <Content Include="assets\images\Courses\DSC01343.JPG" />
+    <Content Include="assets\images\Courses\DSC_3869_dark.jpg" />
+    <Content Include="assets\images\Courses\fameng.jpg" />
+    <Content Include="assets\images\Courses\famengHeadImg.png" />
+    <Content Include="assets\images\Courses\Family Holiday English.JPG" />
+    <Content Include="assets\images\Courses\genengHeadImg.png" />
+    <Content Include="assets\images\Courses\General English.jpg" />
+    <Content Include="assets\images\Courses\generaleng.jpg" />
+    <Content Include="assets\images\Courses\generaleng1.jpg" />
+    <Content Include="assets\images\Courses\handshake %282%29.png" />
+    <Content Include="assets\images\Courses\IELTS.jpg" />
+    <Content Include="assets\images\Courses\IELTSHeadImg.png" />
+    <Content Include="assets\images\Courses\museum.png" />
+    <Content Include="assets\images\Courses\PEHeadImg.png" />
+    <Content Include="assets\images\Courses\Practical Classroom English.JPG" />
+    <Content Include="assets\images\Courses\st.paul.png" />
+    <Content Include="assets\images\Courses\TOEIC.JPG" />
+    <Content Include="assets\images\Courses\TOEIC3.jpg" />
+    <Content Include="assets\images\Courses\TOEICHeadImg.png" />
+    <Content Include="assets\images\Courses\travel1.jpg" />
+    <Content Include="assets\images\Courses\trinity.jpg" />
+    <Content Include="assets\images\Courses\Userpen.png" />
+    <Content Include="assets\images\Courses\uv.jpg" />
+    <Content Include="assets\images\Courses\YLHeadImg.png" />
+    <Content Include="assets\images\Courses\Young Learners.jpg" />
+    <Content Include="assets\images\Courses\younglearns.jpg" />
+    <Content Include="assets\images\crop1.JPG" />
+    <Content Include="assets\images\da2.png" />
+    <Content Include="assets\images\da2crop.png" />
+    <Content Include="assets\images\Dream-Fact-Dance-Academy.png" />
+    <Content Include="assets\images\dreamfootcrop.png" />
+    <Content Include="assets\images\DSC01287.JPG" />
+    <Content Include="assets\images\DSC01343.JPG" />
+    <Content Include="assets\images\DSC01624.JPG" />
+    <Content Include="assets\images\DSC02152.jpg" />
+    <Content Include="assets\images\DSC_0106.jpg" />
+    <Content Include="assets\images\DSC_0448.JPG" />
+    <Content Include="assets\images\DSC_0456.JPG" />
+    <Content Include="assets\images\DSC_0872.JPG" />
+    <Content Include="assets\images\DSC_0942.JPG" />
+    <Content Include="assets\images\DSC_2442_00015.jpg" />
+    <Content Include="assets\images\DSC_3869.JPG" />
+    <Content Include="assets\images\DSC_5442.JPG" />
+    <Content Include="assets\images\dwarf coco farm %2849%29.jpg" />
+    <Content Include="assets\images\crop1.JPG" />
+    <Content Include="assets\images\da2.png" />
+    <Content Include="assets\images\da2crop.png" />
+    <Content Include="assets\images\Dream-Fact-Dance-Academy.png" />
+    <Content Include="assets\images\dreamfootcrop.png" />
+    <Content Include="assets\images\DSC01287.JPG" />
+    <Content Include="assets\images\DSC01343.JPG" />
+    <Content Include="assets\images\DSC01624.JPG" />
+    <Content Include="assets\images\DSC02152.jpg" />
+    <Content Include="assets\images\DSC_0942.JPG" />
+    <Content Include="assets\images\DSC_3869.JPG" />
+    <Content Include="assets\images\DSC_5442.JPG" />
+    <Content Include="assets\images\dwarf coco farm %2849%29.jpg" />
+    <Content Include="assets\images\facts-bg.jpg" />
+    <Content Include="assets\images\Gallery\Activities\animal adventure.png" />
+    <Content Include="assets\images\Gallery\Activities\city tour.png" />
+    <Content Include="assets\images\Gallery\Activities\community outreach program  7.png" />
+    <Content Include="assets\images\Gallery\Activities\community outreach program 1.png" />
+    <Content Include="assets\images\Gallery\Activities\community outreach program 2.png" />
+    <Content Include="assets\images\Gallery\Activities\community outreach program 3.png" />
+    <Content Include="assets\images\Gallery\Activities\community outreach program 4.png" />
+    <Content Include="assets\images\Gallery\Activities\community outreach program 5.png" />
+    <Content Include="assets\images\Gallery\Activities\community outreach program 6.png" />
+    <Content Include="assets\images\Gallery\Activities\cultural exchange.png" />
+    <Content Include="assets\images\Gallery\Activities\food trip 1.png" />
+    <Content Include="assets\images\Gallery\Activities\food trip 2.jpg" />
+    <Content Include="assets\images\Gallery\Activities\food trip 3.jpg" />
+    <Content Include="assets\images\Gallery\Activities\island hopping.png" />
+    <Content Include="assets\images\Gallery\Activities\job simulation.png" />
+    <Content Include="assets\images\Gallery\Activities\museum tour.png" />
+    <Content Include="assets\images\Gallery\Activities\school immersion.png" />
+    <Content Include="assets\images\Gallery\Activities\theme park dinner.png" />
+    <Content Include="assets\images\Gallery\Activities\water sports activity 1.png" />
+    <Content Include="assets\images\Gallery\Activities\water sports activity 2.jpg" />
+    <Content Include="assets\images\Gallery\Activities\water sports activity 3.jpg" />
+    <Content Include="assets\images\Gallery\Activities\water sports activity 4.jpg" />
+    <Content Include="assets\images\Gallery\Activities\water sports activity 5.jpg" />
+    <Content Include="assets\images\Gallery\Activities\whale shark watching.png" />
+    <Content Include="assets\images\Gallery\Activity2\03282019_SGACaGo %282%29.jpg" />
+    <Content Include="assets\images\Gallery\Activity2\03282019_SGACaGo %2823%29.jpg" />
+    <Content Include="assets\images\Gallery\Activity2\03282019_SGACaGo %2844%29.jpg" />
+    <Content Include="assets\images\Gallery\Activity2\03282019_SGACaGo %2849%29.jpg" />
+    <Content Include="assets\images\Gallery\Activity2\03282019_SGACaGo %285%29.jpg" />
+    <Content Include="assets\images\Gallery\Activity2\DSC_5604.JPG" />
+    <Content Include="assets\images\Gallery\Activity2\IMG_2389.JPG" />
+    <Content Include="assets\images\Gallery\Activity2\IMG_7828.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\DSC01490.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\DSC01529.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\DSC01540.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\DSC_4827.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\DSC_5189.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_2393.jpg" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_2429.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_2441.jpg" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_2559.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_7676.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_7696.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_7719.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_7720.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_7754.JPG" />
+    <Content Include="assets\images\Gallery\conferenceroom.png" />
+    <Content Include="assets\images\Gallery\Family Holiday English.JPG" />
+    <Content Include="assets\images\Gallery\General English.jpg" />
+    <Content Include="assets\images\Gallery\groupclassroom.png" />
+    <Content Include="assets\images\Gallery\ITTower2.jpg" />
+    <Content Include="assets\images\Gallery\kidsclassroom1.jpg" />
+    <Content Include="assets\images\Gallery\kidsclassroom2.png" />
+    <Content Include="assets\images\Gallery\library1.jpg" />
+    <Content Include="assets\images\Gallery\library2.jpg" />
+    <Content Include="assets\images\Gallery\mantomancubicles.png" />
+    <Content Include="assets\images\Gallery\Practical Classroom English.JPG" />
+    <Content Include="assets\images\Gallery\questHotel.jpg" />
+    <Content Include="assets\images\Gallery\reception.png" />
+    <Content Include="assets\images\Gallery\Strength\DSC01251.jpg" />
+    <Content Include="assets\images\Gallery\Strength\DSC01303.JPG" />
+    <Content Include="assets\images\Gallery\Strength\DSC02152.jpg" />
+    <Content Include="assets\images\Gallery\Strength\DSC_1804.jpg" />
+    <Content Include="assets\images\Gallery\Strength\DSC_6147.JPG" />
+    <Content Include="assets\images\Gallery\Strength\IMG20190617082114.jpg" />
+    <Content Include="assets\images\Gallery\Strength\ITTowerbuilding.jpg" />
+    <Content Include="assets\images\Gallery\studentspantry1.jpg" />
+    <Content Include="assets\images\Gallery\studentspantry2.png" />
+    <Content Include="assets\images\Gallery\Young Learners English.JPG" />
+    <Content Include="assets\images\Global Station %281%29.png" />
+    <Content Include="assets\images\Gallery\Activity2\03282019_SGACaGo %282%29.jpg" />
+    <Content Include="assets\images\Gallery\Activity2\03282019_SGACaGo %2823%29.jpg" />
+    <Content Include="assets\images\Gallery\Activity2\03282019_SGACaGo %2844%29.jpg" />
+    <Content Include="assets\images\Gallery\Activity2\03282019_SGACaGo %2849%29.jpg" />
+    <Content Include="assets\images\Gallery\Activity2\03282019_SGACaGo %285%29.jpg" />
+    <Content Include="assets\images\Gallery\Activity2\DSC_5604.JPG" />
+    <Content Include="assets\images\Gallery\Activity2\IMG_2389.JPG" />
+    <Content Include="assets\images\Gallery\Activity2\IMG_7828.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\DSC01490.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\DSC01529.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\DSC01540.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\DSC_4827.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\DSC_5189.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_2393.jpg" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_2429.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_2441.jpg" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_2559.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_7676.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_7696.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_7719.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_7720.JPG" />
+    <Content Include="assets\images\Gallery\Activity3\IMG_7754.JPG" />
+    <Content Include="assets\images\Gallery\Family Holiday English.JPG" />
+    <Content Include="assets\images\Gallery\General English.jpg" />
+    <Content Include="assets\images\Gallery\Practical Classroom English.JPG" />
+    <Content Include="assets\images\Gallery\Strength\DSC01251.jpg" />
+    <Content Include="assets\images\Gallery\Strength\DSC01303.JPG" />
+    <Content Include="assets\images\Gallery\Strength\DSC02152.jpg" />
+    <Content Include="assets\images\Gallery\Strength\DSC_1804.jpg" />
+    <Content Include="assets\images\Gallery\Strength\DSC_6147.JPG" />
+    <Content Include="assets\images\Gallery\Strength\IMG20190617082114.jpg" />
+    <Content Include="assets\images\Gallery\Young Learners English.JPG" />
+    <Content Include="assets\images\Global Station %281%29.png" />
+    <Content Include="assets\images\heading-bg.jpg" />
+    <Content Include="assets\images\Highly qualified teaching professional.jpg" />
+    <Content Include="assets\images\hilltop new.png" />
+    <Content Include="assets\images\hilltop2.png" />
+    <Content Include="assets\images\hilltop2crop.png" />
+    <Content Include="assets\images\IMG_2226.JPG" />
+    <Content Include="assets\images\IMG_2771.JPG" />
+    <Content Include="assets\images\IMG_7025.JPG" />
+    <Content Include="assets\images\img_daihyo.jpg" />
+    <Content Include="assets\images\Jomu.jpg" />
+    <Content Include="assets\images\Jomu1.jpg" />
+    <Content Include="assets\images\kgg.png" />
+    <Content Include="assets\images\loading.gif" />
+    <Content Include="assets\images\meeting-01.jpg" />
+    <Content Include="assets\images\meeting-02.jpg" />
+    <Content Include="assets\images\meeting-03.jpg" />
+    <Content Include="assets\images\meeting-04.jpg" />
+    <Content Include="assets\images\meetings-bg.jpg" />
+    <Content Include="assets\images\meetings-page-bg.jpg" />
+    <Content Include="assets\images\Modern service facilities.JPG" />
+    <Content Include="assets\images\monkey logo.png" />
+    <Content Include="assets\images\next.png" />
+    <Content Include="assets\images\oslob whaleshark %2815%29.jpg" />
+    <Content Include="assets\images\Outreach Program.jpg" />
+    <Content Include="assets\images\owlcrop.png" />
+    <Content Include="assets\images\Partner Schools.jpg" />
+    <Content Include="assets\images\play-icon.png" />
+    <Content Include="assets\images\prev.png" />
+    <Content Include="assets\images\rabby kids world.png" />
+    <Content Include="assets\images\right-arrow.png" />
+    <Content Include="assets\images\SDA new.png" />
+    <Content Include="assets\images\section_apply.jpg" />
+    <Content Include="assets\images\section_course.jpg" />
+    <Content Include="assets\images\section_facts.jpg" />
+    <Content Include="assets\images\seiha english academy.png" />
+    <Content Include="assets\images\seiha-english-academy-office.jpg" />
+    <Content Include="assets\images\Seiha1985.png" />
+    <Content Include="assets\images\service-icon-01.png" />
+    <Content Include="assets\images\service-icon-02.png" />
+    <Content Include="assets\images\service-icon-03.png" />
+    <Content Include="assets\images\service-item-bg.jpg" />
+    <Content Include="assets\images\cover-min.jpg" />
+    <Content Include="assets\images\sga opening 00001-14.jpg" />
+    <Content Include="assets\images\sga opening 00001-20.jpg" />
+    <Content Include="assets\images\SGA WEBSITE BACKGROUND_V2-02.jpg" />
+    <Content Include="assets\images\SGA-logo-v1-8.png" />
+    <Content Include="assets\images\sgg.png" />
+    <Content Include="assets\images\single-meeting.jpg" />
+    <Content Include="assets\images\size_dark.jpg" />
+    <Content Include="assets\images\SWA.png" />
+    <Content Include="assets\images\Teachers\Andre_class.jpg" />
+    <Content Include="assets\images\Teachers\Bea_class.jpg" />
+    <Content Include="assets\images\Teachers\mj1.jpg" />
+    <Content Include="assets\images\tesda.png" />
+    <Content Include="assets\images\TesdaLogo.png" />
+    <Content Include="assets\images\Tried and tested method.jpg" />
+    <Content Include="assets\images\UPTALK PLAY.png" />
+    <Content Include="assets\images\Uptalk Time.png" />
+    <Content Include="assets\images\UPTALK-hi-res.png" />
+    <Content Include="assets\images\TesdaLogo.png" />
+    <Content Include="assets\images\UPTALK PLAY.png" />
+    <Content Include="assets\images\Uptalk Time.png" />
+    <Content Include="assets\images\UPTALK-hi-res.png" />
+    <Content Include="assets\images\video-item-bg.jpg" />
+    <Content Include="assets\images\Why Study in Cebu 2.jpg" />
+    <Content Include="assets\images\Why Study in Cebu 3.jpg" />
+    <Content Include="assets\images\Why Study in Cebu.jpg" />
+    <Content Include="assets\js\aos.js" />
+    <Content Include="assets\js\button.1.20.0.1.js" />
+    <Content Include="assets\js\custom.js" />
+    <Content Include="assets\js\isotope.js" />
+    <Content Include="assets\js\isotope.min.js" />
+    <Content Include="assets\js\jquery.fancybox.min.js" />
+    <Content Include="assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="assets\js\jquery.stellar.min.js" />
+    <Content Include="assets\js\lightbox.js" />
+    <Content Include="assets\js\longbow.slidercaptcha.js" />
+    <Content Include="assets\js\longbow.slidercaptcha.min.js" />
+    <Content Include="assets\js\mozaic.js" />
+    <Content Include="assets\js\owl-carousel.js" />
+    <Content Include="assets\js\slick-slider.js" />
+    <Content Include="assets\js\tabs.js" />
+    <Content Include="assets\js\video.js" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
+    <Content Include="bin\DotNetOpenAuth.AspNet.dll" />
+    <Content Include="bin\DotNetOpenAuth.Core.dll" />
+    <Content Include="bin\DotNetOpenAuth.OAuth.Consumer.dll" />
+    <Content Include="bin\DotNetOpenAuth.OAuth.dll" />
+    <Content Include="bin\DotNetOpenAuth.OpenId.dll" />
+    <Content Include="bin\DotNetOpenAuth.OpenId.RelyingParty.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="bin\Microsoft.AspNet.Membership.OpenAuth.dll" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Providers.dll" />
+    <Content Include="bin\WebApplication1.dll" />
+    <Content Include="bin\WebApplication1.pdb" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="Booking.aspx" />
+    <Content Include="Bulletin\FAQ.aspx" />
+    <Content Include="Bulletin\News.aspx" />
+    <Content Include="Bulletin\Testimonials.aspx" />
+    <Content Include="Course\BusinessEng.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Course\CustomerRel.aspx" />
+    <Content Include="Course\FamilyEng.aspx" />
+    <Content Include="Course\GeneralEng.aspx" />
+    <Content Include="Course\IELTS.aspx" />
+    <Content Include="Course\TOEIC.aspx" />
+    <Content Include="Course\PracticalEng.aspx" />
+    <Content Include="Course\YoungLearners.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Estimate.aspx" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\Age-Group-Banner-v3-5-2-2.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\global-runner-logo-1.png" />
+    <Content Include="Images\google-maps-icon-3d-11.jpg" />
+    <Content Include="Images\green_back.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Pic0.jpg" />
+    <Content Include="Images\Pic1.jpg" />
+    <Content Include="Images\Pic2.jpg" />
+    <Content Include="Images\Pic3.jpg" />
+    <Content Include="Images\Pic4.jpg" />
+    <Content Include="Images\Seiha-Eagle-Philippine-Colorways.ico" />
+    <Content Include="Images\sga-banner-2023-1-0-v1.png" />
+    <Content Include="Images\sga-banner-2023-1-0-v3.png" />
+    <Content Include="Images\sga-banner-2023-1-2-v1.png" />
+    <Content Include="Images\sga-banner-2023-1-3-v1.png" />
+    <Content Include="Images\sga-banner-2023-2-0-v1.png" />
+    <Content Include="Images\sga-banner-2023-2-1-v1.png" />
+    <Content Include="Images\sga-banner-2023-3-0-v1.png" />
+    <Content Include="Images\sga-banner-2023-4-0-v1.png" />
+    <Content Include="Images\sga-banner-2023-4-1-v1.png" />
+    <Content Include="Images\sga-banner-2023-5-0-v1.png" />
+    <Content Include="Images\SGALogo.ico" />
+    <Content Include="Images\SGALogo144x144.png" />
+    <Content Include="Images\SGALogo32x32.png" />
+    <Content Include="Images\SGALogo48x48.png" />
+    <Content Include="Images\SGAlogoNew.png" />
+    <Content Include="Images\sgalogo_small.png" />
+    <Content Include="Images\size.jpg" />
+    <Content Include="Images\size_dark.jpg" />
+    <Content Include="Images\why1.png" />
+    <Content Include="Images\why2.png" />
+    <Content Include="Images\why3.png" />
+    <Content Include="Images\why4.png" />
+    <Content Include="Location.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="assets\fonts\Flaticon.woff" />
+    <Content Include="assets\fonts\flexslider-icon.eot" />
+    <Content Include="assets\fonts\flexslider-icon.ttf" />
+    <Content Include="assets\fonts\flexslider-icon.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\slick.eot" />
+    <Content Include="assets\fonts\slick.ttf" />
+    <Content Include="assets\fonts\slick.woff" />
+    <Content Include="Images\size.webp" />
+    <Content Include="Images\size_dark.webp" />
+    <Content Include="Images\sgalogo_small.webp" />
+    <Content Include="assets\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="assets\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\core.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\list.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\path.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="assets\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="assets\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="assets\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="assets\images\Teachers\Teachers.zip" />
+    <Content Include="assets\images\images.zip" />
+    <Content Include="assets\assets.zip" />
+    <Content Include="assets\images\Courses\Courses.zip" />
+    <Content Include="assets\js\longbow.slidercaptcha.min.js.map" />
+    <Content Include="Course.zip" />
+    <Content Include="Content.zip" />
+    <Content Include="AdminAssets\icon\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="AdminAssets\icon\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="AdminAssets\icon\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="AdminAssets\icon\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="AdminAssets\icon\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="AdminAssets\icon\font-awesome\less\animated.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\bordered-pulled.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\core.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\fixed-width.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\font-awesome.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\icons.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\larger.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\list.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\mixins.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\path.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\rotated-flipped.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\screen-reader.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\stacked.less" />
+    <Content Include="AdminAssets\icon\font-awesome\less\variables.less" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\font-awesome.css.map" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\font-awesome.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_animated.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_core.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_icons.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_larger.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_list.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_mixins.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_path.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_stacked.scss" />
+    <Content Include="AdminAssets\icon\font-awesome\scss\_variables.scss" />
+    <Content Include="AdminAssets\icon\icofont\fonts\icofont.eot" />
+    <Content Include="AdminAssets\icon\icofont\fonts\icofont.ttf" />
+    <Content Include="AdminAssets\icon\icofont\fonts\icofont.woff" />
+    <Content Include="AdminAssets\icon\themify-icons\fonts\themify.eot" />
+    <Content Include="AdminAssets\icon\themify-icons\fonts\themify.ttf" />
+    <Content Include="AdminAssets\icon\themify-icons\fonts\themify.woff" />
+    <Content Include="bin\WebApplication1.dll.config" />
+    <Content Include="assets\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="assets\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="assets\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="assets\fonts\Material-Design-Iconic-Font.woff2" />
+    <None Include="Properties\PublishProfiles\SGALocal.pubxml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Photos.aspx" />
+    <Content Include="Plan.aspx" />
+    <Content Include="Procedure.aspx" />
+    <Content Include="Properties\PublishProfiles\SGALocal.pubxml.user" />
+    <Content Include="Register.aspx" />
+    <Content Include="Review.aspx" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="sitemap.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="WebApplication1.csproj.mine" />
+    <Content Include="WebApplication1.csproj.r1" />
+    <Content Include="WebApplication1.csproj.r113" />
+    <Content Include="WebApplication1.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\_references.js" />
+    <Content Include="Site.Mobile.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs\Activities.aspx.cs">
+      <DependentUpon>Activities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\Activities.aspx.designer.cs">
+      <DependentUpon>Activities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs\Message.aspx.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\Message.aspx.designer.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs\Strength.aspx.cs">
+      <DependentUpon>Strength.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\Strength.aspx.designer.cs">
+      <DependentUpon>Strength.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs\WhyCebu.aspx.cs">
+      <DependentUpon>WhyCebu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\WhyCebu.aspx.designer.cs">
+      <DependentUpon>WhyCebu.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\Hashing.cs" />
+    <Content Include="App_Code\ModGlobal.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Booking.aspx.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Booking.aspx.designer.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bulletin\FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bulletin\FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bulletin\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bulletin\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bulletin\Testimonials.aspx.cs">
+      <DependentUpon>Testimonials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bulletin\Testimonials.aspx.designer.cs">
+      <DependentUpon>Testimonials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course\BusinessEng.aspx.cs">
+      <DependentUpon>BusinessEng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course\BusinessEng.aspx.designer.cs">
+      <DependentUpon>BusinessEng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course\CustomerRel.aspx.cs">
+      <DependentUpon>CustomerRel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course\CustomerRel.aspx.designer.cs">
+      <DependentUpon>CustomerRel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course\FamilyEng.aspx.cs">
+      <DependentUpon>FamilyEng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course\FamilyEng.aspx.designer.cs">
+      <DependentUpon>FamilyEng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course\GeneralEng.aspx.cs">
+      <DependentUpon>GeneralEng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course\GeneralEng.aspx.designer.cs">
+      <DependentUpon>GeneralEng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course\IELTS.aspx.cs">
+      <DependentUpon>IELTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course\IELTS.aspx.designer.cs">
+      <DependentUpon>IELTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course\TOEIC.aspx.cs">
+      <DependentUpon>TOEIC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course\TOEIC.aspx.designer.cs">
+      <DependentUpon>TOEIC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course\PracticalEng.aspx.cs">
+      <DependentUpon>PracticalEng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course\PracticalEng.aspx.designer.cs">
+      <DependentUpon>PracticalEng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course\YoungLearners.aspx.cs">
+      <DependentUpon>YoungLearners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course\YoungLearners.aspx.designer.cs">
+      <DependentUpon>YoungLearners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estimate.aspx.cs">
+      <DependentUpon>Estimate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estimate.aspx.designer.cs">
+      <DependentUpon>Estimate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Location.aspx.cs">
+      <DependentUpon>Location.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Location.aspx.designer.cs">
+      <DependentUpon>Location.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos.aspx.cs">
+      <DependentUpon>Photos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos.aspx.designer.cs">
+      <DependentUpon>Photos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plan.aspx.cs">
+      <DependentUpon>Plan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plan.aspx.designer.cs">
+      <DependentUpon>Plan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Procedure.aspx.cs">
+      <DependentUpon>Procedure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procedure.aspx.designer.cs">
+      <DependentUpon>Procedure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Review.aspx.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Review.aspx.designer.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminAssets\icon\flag-icons\fonts\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="assets\images\Gallery\Activity4\" />
+    <Folder Include="vendor\jquery\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2532</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2532/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
